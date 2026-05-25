@@ -140,6 +140,9 @@
       const isActive = slideIndex === activeSlide;
       slide.classList.toggle("is-active", isActive);
       slide.setAttribute("aria-hidden", String(!isActive));
+      slide.querySelectorAll("a, button, input, textarea, select").forEach((element) => {
+        element.tabIndex = isActive ? 0 : -1;
+      });
     });
 
     carouselDots.forEach((dot, dotIndex) => {

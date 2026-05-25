@@ -1143,6 +1143,87 @@ p {
     repeating-linear-gradient(90deg, transparent 0 13px, rgba(255, 255, 255, 0.18) 13px 14px);
 }
 
+.project-video-card {
+  align-content: center;
+  gap: clamp(8px, 1.2vw, 14px);
+  padding-top: clamp(22px, 3vw, 34px);
+  padding-bottom: clamp(46px, 4vw, 56px);
+}
+
+.video-link {
+  position: relative;
+  display: block;
+  width: min(430px, 100%);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius);
+  background: #000000;
+  box-shadow: 7px 7px 0 color-mix(in srgb, var(--page-accent) 20%, transparent);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.video-link::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.42)),
+    radial-gradient(circle at 50% 50%, transparent 0 42%, rgba(0, 0, 0, 0.36));
+  pointer-events: none;
+  content: "";
+}
+
+.video-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.06) saturate(0.92);
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.video-link:hover img,
+.video-link:focus-visible img {
+  filter: contrast(1.1) saturate(1.05);
+  transform: scale(1.04);
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #000000;
+  box-shadow: var(--glow);
+  transform: translate(-50%, -50%);
+}
+
+.video-play svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 3px;
+  fill: currentColor;
+}
+
+.project-video-card h3 {
+  max-width: 17ch;
+  margin-bottom: 0;
+  font-size: clamp(1.45rem, 2.25vw, 2.1rem);
+}
+
+.project-video-card > p:last-child {
+  max-width: 42ch;
+  font-size: clamp(0.92rem, 1.15vw, 1rem);
+  line-height: 1.5;
+}
+
 .carousel-control {
   position: absolute;
   top: 50%;
@@ -1827,6 +1908,29 @@ p {
 
   .project-card h3 {
     font-size: clamp(1.55rem, 7vw, 2.15rem);
+  }
+
+  .project-video-card {
+    gap: 8px;
+    padding: 22px 64px 46px;
+  }
+
+  .project-video-card h3 {
+    font-size: clamp(1.28rem, 6vw, 1.7rem);
+  }
+
+  .project-video-card > p:last-child {
+    display: none;
+  }
+
+  .video-link {
+    width: 100%;
+    box-shadow: 5px 5px 0 color-mix(in srgb, var(--page-accent) 20%, transparent);
+  }
+
+  .video-play {
+    width: 48px;
+    height: 48px;
   }
 
   .project-visual {
