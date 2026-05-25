@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data: blob:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
+    >
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+      name="description"
+      content="Portfolio de Laurent Schaeffer — communication, web, création de contenus et intelligence artificielle."
+    >
+    <title>Laurent Schaeffer | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#presentation">Aller au contenu</a>
+
+    <header class="site-header" aria-label="Navigation principale">
+      <button class="brand" type="button" data-target="presentation" aria-label="Revenir à la présentation">
+        <span class="brand-text">Laurent Schaeffer</span>
+      </button>
+
+      <nav class="nav-map" aria-label="Rubriques du portfolio">
+        <button type="button" data-target="etudes">Études</button>
+        <button type="button" data-target="realisations">Réalisations</button>
+        <button type="button" data-target="presentation">Présentation</button>
+        <button type="button" data-target="contact">Contact</button>
+        <button type="button" data-target="parcours">Parcours</button>
+      </nav>
+
+      <p class="view-label" aria-live="polite">Présentation</p>
+    </header>
+
+    <div class="edge-nav" aria-label="Navigation spatiale">
+      <button class="edge-button edge-up" type="button" data-direction="up">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 5l-7 7m7-7 7 7M12 5v14"></path>
+        </svg>
+        <span>Études</span>
+      </button>
+      <button class="edge-button edge-right" type="button" data-direction="right">
+        <span>Contact</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M19 12l-7-7m7 7-7 7M19 12H5"></path>
+        </svg>
+      </button>
+      <button class="edge-button edge-down" type="button" data-direction="down">
+        <span>Parcours</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 19l7-7m-7 7-7-7m7 7V5"></path>
+        </svg>
+      </button>
+      <button class="edge-button edge-left" type="button" data-direction="left">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M5 12l7 7m-7-7 7-7M5 12h14"></path>
+        </svg>
+        <span>Réalisations</span>
+      </button>
+    </div>
+
+    <!-- Hint de navigation — visible 4 secondes au chargement -->
+    <div class="nav-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12h14"></path>
+      </svg>
+      Explorez en 4 directions
+    </div>
+
+    <main class="viewport" id="portfolio" tabindex="-1">
+      <div class="world" id="world">
+
+        <!-- ═══════════════════════════════ ÉTUDES ═══════════════════════════════ -->
+        <section class="panel panel-etudes" id="etudes" aria-labelledby="etudes-title">
+          <div class="panel-shell education-layout">
+            <div class="section-heading">
+              <p class="direction-code">Nord / formation</p>
+              <h2 id="etudes-title">Études &amp; diplômes</h2>
+              <p>
+                Un socle entre technique et communication, renforcé par une
+                certification IA en 2026 pour rester au plus proche des usages réels.
+              </p>
+            </div>
+
+            <div class="timeline compact-timeline" aria-label="Liste des formations">
+              <article>
+                <span class="timeline-year">2026</span>
+                <h3>Certification IA &amp; Automatisation</h3>
+                <p>Approfondissement des usages IA générative, prompts structurés, workflows augmentés et enjeux éthiques en contexte professionnel.</p>
+              </article>
+              <article>
+                <span class="timeline-year">2019</span>
+                <h3>Licence Pro Communication &amp; Développement Web</h3>
+                <p>Université de Strasbourg — stratégie éditoriale, création de contenus web, référencement et gestion de projets digitaux.</p>
+              </article>
+              <article>
+                <span class="timeline-year">2018</span>
+                <h3>BTS SIO — Solutions Informatiques et Objets Connectés</h3>
+                <p>Lycée René Cassin, Strasbourg — fondamentaux techniques : réseaux, développement, systèmes et gestion de projets informatiques.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════ RÉALISATIONS ═══════════════════════════ -->
+        <section class="panel panel-realisations" id="realisations" aria-labelledby="realisations-title">
+          <div class="panel-shell projects-layout">
+            <div class="section-heading">
+              <p class="direction-code">Ouest / création</p>
+              <h2 id="realisations-title">Réalisations</h2>
+              <p>
+                Des domaines dans lesquels j'interviens concrètement — de la stratégie
+                à la production, du contenu à la formation.
+              </p>
+            </div>
+
+            <div class="project-carousel" aria-label="Carrousel des réalisations">
+              <button class="carousel-control carousel-prev" type="button" data-carousel="prev" aria-label="Réalisation précédente">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M15 6l-6 6 6 6"></path>
+                </svg>
+              </button>
+
+              <div class="carousel-viewport">
+                <article class="project-card carousel-slide is-active" data-slide="0" aria-hidden="false">
+                  <div class="project-visual" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <p class="project-type">Communication institutionnelle</p>
+                  <h3>Pilotage de campagnes &amp; refonte éditoriale</h3>
+                  <p>Coordination d'événements, campagnes internes et refonte des supports numériques pour une direction de la fonction publique.</p>
+                </article>
+                <article class="project-card carousel-slide" data-slide="1" aria-hidden="true">
+                  <p class="project-type">Formation &amp; transmission</p>
+                  <h3>Formations IA en milieu professionnel</h3>
+                  <p>Conception et animation de modules de formation à l'IA générative — usages éthiques, outils concrets, adaptation aux métiers.</p>
+                </article>
+                <article class="project-card carousel-slide" data-slide="2" aria-hidden="true">
+                  <p class="project-type">Community Management</p>
+                  <h3>Animation communauté jeu mobile</h3>
+                  <p>Gestion de la communauté francophone d'un jeu mobile : forum, Discord, contenus live, modération et retours joueurs.</p>
+                </article>
+                <article class="project-card carousel-slide" data-slide="3" aria-hidden="true">
+                  <p class="project-type">Contenus &amp; stratégie web</p>
+                  <h3>Stratégie éditoriale &amp; social media</h3>
+                  <p>Élaboration de stratégies de contenu cross-plateformes — rédaction, planification, cohérence de marque et pilotage des performances.</p>
+                </article>
+              </div>
+
+              <button class="carousel-control carousel-next" type="button" data-carousel="next" aria-label="Réalisation suivante">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M9 6l6 6-6 6"></path>
+                </svg>
+              </button>
+
+              <div class="carousel-dots" aria-label="Choisir une réalisation">
+                <button type="button" data-slide-target="0" aria-label="Afficher Pilotage de campagnes" aria-current="true"></button>
+                <button type="button" data-slide-target="1" aria-label="Afficher Formations IA"></button>
+                <button type="button" data-slide-target="2" aria-label="Afficher Animation communauté"></button>
+                <button type="button" data-slide-target="3" aria-label="Afficher Stratégie éditoriale"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════ PRÉSENTATION ══════════════════════════ -->
+        <section class="panel panel-presentation" id="presentation" aria-labelledby="presentation-title">
+          <div class="presentation-stage">
+            <h1 id="presentation-title" class="sr-only">Laurent Schaeffer</h1>
+
+            <!-- Étape 1 : bouton d'entrée -->
+            <div class="presentation-intro">
+              <button class="discover-button" type="button" data-reveal-profile>
+                Envie de me découvrir ?
+              </button>
+            </div>
+
+            <!-- Étape 2 : carte identité (révélée au clic) -->
+            <div class="identity-reveal" data-profile-reveal aria-hidden="true">
+              <div class="identity-card">
+                <figure class="photo-card">
+                  <img
+                    src="photos/1682444321005.jpg"
+                    alt="Photo de Laurent Schaeffer"
+                    class="profile-photo"
+                    width="300"
+                    height="366"
+                    loading="eager"
+                  >
+                </figure>
+
+                <div class="identity-copy">
+                  <p class="identity-firstname">Laurent</p>
+                  <div class="identity-meta">
+                    <span>33 ans</span>
+                    <span class="meta-sep">·</span>
+                    <span>Chargé de communication</span>
+                  </div>
+                  <nav class="identity-actions" aria-label="Explorer le portfolio">
+                    <a
+                      class="action-btn action-btn-primary"
+                      href="https://www.linkedin.com/in/laurentschaeffer/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >LinkedIn →</a>
+                    <button class="action-btn" type="button" data-target="parcours">Mon parcours</button>
+                    <button class="action-btn" type="button" data-target="etudes">Mes études</button>
+                    <button class="action-btn" type="button" data-target="realisations">Mes réalisations</button>
+                    <button class="action-btn action-btn-muted" type="button" disabled aria-disabled="true">CV — bientôt</button>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+        <section class="panel panel-contact" id="contact" aria-labelledby="contact-title">
+          <div class="panel-shell contact-layout">
+            <div class="section-heading">
+              <p class="direction-code">Est / échange</p>
+              <h2 id="contact-title">Contact</h2>
+              <p>
+                Un message court suffit pour ouvrir la discussion.
+              </p>
+              <a class="mail-link" href="mailto:laurent.schaeffer20@gmail.com">laurent.schaeffer20@gmail.com</a>
+            </div>
+
+            <form class="contact-form" action="contact.php" method="post" data-endpoint="contact.php" novalidate>
+              <div class="form-row">
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="120" required>
+              </div>
+              <div class="form-row">
+                <label for="subject">Sujet</label>
+                <input id="subject" name="subject" type="text" maxlength="120" required>
+              </div>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" maxlength="1200" required></textarea>
+              </div>
+              <label class="form-trap" for="company">Entreprise</label>
+              <input class="form-trap" id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+              <button class="primary-action submit-action" type="submit">Envoyer</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════ PARCOURS ══════════════════════════════ -->
+        <section class="panel panel-parcours" id="parcours" aria-labelledby="parcours-title">
+          <div class="panel-shell career-layout">
+            <div class="section-heading">
+              <p class="direction-code">Sud / terrain</p>
+              <h2 id="parcours-title">Parcours professionnel</h2>
+              <p>
+                Plus de 8 ans d'expériences entre communication institutionnelle,
+                digital, formation et univers du jeu vidéo.
+              </p>
+            </div>
+
+            <div class="career-board" aria-label="Étapes professionnelles">
+              <div class="career-ticker">
+                <div class="career-group">
+                  <article>
+                    <span class="timeline-year">Actuel</span>
+                    <h3>Chargé de communication, Webmaster &amp; Formateur IA</h3>
+                    <p>Direction générale des Finances publiques · Nov. 2021 – aujourd'hui · Pilotage de campagnes institutionnelles, administration web, création visuelle &amp; audiovisuelle, formation IA générative.</p>
+                  </article>
+                  <article>
+                    <span class="timeline-year">2021</span>
+                    <h3>Agent technique multimédia &amp; Chargé de communication</h3>
+                    <p>HUMANIS (Collectif associatif) · Jan. – Nov. 2021 · Stratégie éditoriale, social media, gestion de sites web, inclusion numérique et gestion de projets associatifs.</p>
+                  </article>
+                  <article>
+                    <span class="timeline-year">2021</span>
+                    <h3>Formateur communication &amp; informatique</h3>
+                    <p>Groupe Alternance Strasbourg · Mars – Oct. 2021 · Formation BTS NDRC/MCO — communication digitale, WordPress, HTML/CSS, référencement et performance digitale.</p>
+                  </article>
+                  <article>
+                    <span class="timeline-year">2019</span>
+                    <h3>Community Manager — Pôle Canaux Digitaux</h3>
+                    <p>Crédit Agricole Alsace Vosges · Avr. – Sept. 2019 · Social media en environnement bancaire, planning éditorial, création visuelle (Premiere Pro, Photoshop, InDesign), e-réputation.</p>
+                  </article>
+                  <article>
+                    <span class="timeline-year">2016</span>
+                    <h3>Chargé de communication &amp; Community Manager FR</h3>
+                    <p>Nexon Mobile · Juin 2016 – Juil. 2018 · Animation de la communauté francophone du jeu Fantasy War Tactics R — forum, Discord, contenus, localisation et veille.</p>
+                  </article>
+                </div>
+                <!-- Le clone pour la boucle seamless est injecté par app.js -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
